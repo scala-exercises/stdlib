@@ -105,7 +105,7 @@ object Options extends AnyFlatSpec with Matchers with org.scalaexercises.definit
     /** Note that the type of result1 is now Option[Double], thanks to the scala type inference. */
   }
 
-  /** Another operation is `fold`. This operation will extract the value from the option, or provide a default if the value is `None`
+  /** Another operation is `fold`. This operation will extract the value from the option and apply the function, or provide a default and ignore the function if the value is `None`
    */
   def foldOptions(res0: Int, res1: Int) = {
     val number: Option[Int]   = Some(3)
