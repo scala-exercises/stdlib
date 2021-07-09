@@ -33,6 +33,16 @@ object TypeVariance extends AnyFlatSpec with Matchers with org.scalaexercises.de
    * Scala's type inference system works a little differently, but it's similar in spirit: infer constraints, and attempt to unify a type.
    *
    * Using type inference the type that you instantiate will be the val or var reference type:
+   *
+   * {{{
+   * class Fruit
+   * abstract class Citrus extends Fruit
+   * class Orange          extends Citrus
+   * class Tangelo         extends Citrus
+   * class Apple           extends Fruit
+   * class Banana          extends Fruit
+   * }}}
+   *
    */
   def syntacticOverheadTypeVariance(res0: String) = {
     class MyContainer[A](val a: A)(implicit manifest: scala.reflect.Manifest[A]) {
